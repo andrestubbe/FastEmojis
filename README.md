@@ -38,7 +38,7 @@ public class Demo {
 ---
 
 ## Table of Contents
-- [Our Mission](#-our-mission)
+- [Mission](#-mission)
 - [Key Features](#-key-features)
 - [Performance](#-performance)
 - [API Quick Reference](#-api-quick-reference)
@@ -51,8 +51,8 @@ public class Demo {
 
 ---
 
-## 🎯 Our Mission
-Our mission is to guarantee absolute visual consistency and layouts across all Java graphical pipelines, full-screen TUIs, and console text utilities. FastEmojis provides the zero-overhead Unicode backbone for text measurement, enabling seamless emoji support in `FastTerminal`, pixel-perfect text wraps in `FastGraphics`, and custom text area formatting in Swing and native UI systems.
+## 🎯 Mission
+The mission is to guarantee absolute visual consistency and layouts across all Java graphical pipelines, full-screen TUIs, and console text utilities. FastEmojis provides the zero-overhead Unicode backbone for text measurement, enabling seamless emoji support in `FastTerminal`, pixel-perfect text wraps in `FastGraphics`, and custom text area formatting in Swing and native UI systems.
 
 ---
 
