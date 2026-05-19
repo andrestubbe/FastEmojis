@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![JitPack](https://jitpack.io/v/andrestubbe/FastEmojis.svg)](https://jitpack.io/#andrestubbe/FastEmojis)
 
-![FastEmojis Showcase](docs/screenshot_color.png)
+![FastEmojis Showcase](docs/screenshot_black.png)
 
 FastEmojis is the lightweight Unicode processing and grid layout substrate of the **FastJava** ecosystem. It resolves the biggest visual layout challenge in modern terminal emulators, TUIs, and text controls: measuring the exact visual column-width occupied by standard CJK characters and complex double-width Emojis (e.g. `⚡`, `🚀`, `😊`). 
 
