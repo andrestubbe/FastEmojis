@@ -1,4 +1,4 @@
-# FastEmojis — High-Performance Unicode & Emoji Width Engine for Java [v0.1.0]
+﻿# FastEmojis — High-Performance Unicode & Emoji Width Engine for Java [v0.1.0]
 
 **A zero-dependency, zero-allocation UTF-8 Unicode East Asian Width (EAW) and Emoji width engine for Java, designed to guarantee pixel-perfect terminal grids and graphical text layout rendering.**
 
