@@ -2,17 +2,17 @@
 
 **A zero-dependency, zero-allocation UTF-8 Unicode East Asian Width (EAW) and Emoji width engine for Java, designed to guarantee pixel-perfect terminal grids and graphical text layout rendering.**
 
-[![Build](https://img.shields.io/github/actions/workflow/status/andrestubbe/FastEmojis/maven.yml?branch=main)](https://github.com/andrestubbe/FastEmojis/actions)
-[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![JitPack](https://jitpack.io/v/andrestubbe/FastEmojis.svg)](https://jitpack.io/#andrestubbe/FastEmojis)
-
 ![FastEmojis Showcase](docs/screenshot_diverse.png)
 
 FastEmojis is the lightweight Unicode processing and grid layout substrate of the **FastJava** ecosystem. It resolves the biggest visual layout challenge in modern terminal emulators, TUIs, and text controls: measuring the exact visual column-width occupied by standard CJK characters and complex double-width Emojis (e.g. `⚡`, `🚀`, `😊`). 
 
 By calculating width procedurally without allocating objects, FastEmojis is 100% garbage-collection-free and suited for 120–240 FPS real-time rendering pipelines.
+
+[![Status](https://img.shields.io/badge/status-v0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastEmojis/releases/tag/v0.1.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
+[![JitPack](https://img.shields.io/badge/JitPack-ready-green.svg)](https://jitpack.io/#andrestubbe)
 
 ---
 
