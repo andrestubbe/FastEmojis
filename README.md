@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
 [![JitPack](https://img.shields.io/badge/JitPack-ready-green.svg)](https://jitpack.io/#andrestubbe)
 
-**A zero-dependency, zero-allocation UTF-8 Unicode East Asian Width (EAW) and Emoji width engine for Java, designed to
+**⚡ A zero-dependency, zero-allocation UTF-8 Unicode East Asian Width (EAW) and Emoji width engine for Java, designed to
 guarantee pixel-perfect terminal grids and graphical text layout rendering.**
 
 FastEmojis is the lightweight Unicode processing and grid layout substrate of the **FastJava** ecosystem. It resolves
@@ -114,7 +114,7 @@ FastEmojis organizes premium double-width symbols into type-safe constants:
 
 ---
 
-## 📥 Installation
+## Installation
 
 Unlike JNI-based modules, FastEmojis is pure-Java and has **zero external dependencies**.
 
@@ -163,15 +163,16 @@ Download the pre-compiled JAR directly to add to your project's classpath:
 
 ---
 
-## 📖 Documentation
+## Documentation
 
+* **[COMPILE.md](COMPILE.md)**: Full compilation guide (MSVC C++17 build chain + JNI Setup).
 * **[REFERENCE.md](REFERENCE.md)**: Full API descriptions, border configurations, and codepoint index.
 * **[PHILOSOPHIE.md](PHILOSOPHIE.md)**: The engineering rationale for zero-allocation performance.
 * **[ROADMAP.md](ROADMAP.md)**: Future milestones and planned features.
 
 ---
 
-## 💻 Platform Support
+## Platform Support
 
 | Platform      | Status            |
 |---------------|-------------------|
@@ -181,21 +182,19 @@ Download the pre-compiled JAR directly to add to your project's classpath:
 
 ---
 
-## 🌐 Modular Ecosystem
-
-FastEmojis serves as the foundational text-layout standard across the **FastJava** suite:
-
-* [**FastTerminal**](https://github.com/andrestubbe/FastTerminal) — Real-time high-fidelity ANSI terminal renderer.
-* [**FastGraphics**](https://github.com/andrestubbe/FastGraphics) — SIMD-accelerated Java2D vector pipeline.
-
----
-
-## ⚖️ License
+## License
 
 MIT License — See [LICENSE](LICENSE) file for details.
 
 ---
 
-**Part of the FastJava Ecosystem** — *Making the JVM faster.*
+## Related Projects
 
-Made with ⚡ by Andre Stubbe
+- [FastFileIndex](https://github.com/andrestubbe/FastFileIndex) - Binary file indexing with mmap support
+- [FastFileSearch](https://github.com/andrestubbe/FastFileSearch) - Prefix Trie, N-Gram index, and Ranking engine
+- [FastFileWatch](https://github.com/andrestubbe/FastFileWatch) - USN Journal-based live file monitoring
+- [FastCore](https://github.com/andrestubbe/FastCore) - Unified JNI loader and platform abstraction
+
+---
+
+**Part of the FastJava Ecosystem** — *Making the JVM faster. Small package. Maximum speed. Zero bloat. 🚀📋*
