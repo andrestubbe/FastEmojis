@@ -19,6 +19,23 @@ By calculating width procedurally without allocating objects, FastEmojis is 100%
 ![FastEmojis Showcase](docs/screenshot_diverse.png)
 
 
+
+
+---
+
+## Table of Contents
+
+- [Mission](#-mission)
+- [Key Features](#-key-features)
+- [Performance](#-performance)
+- [API Quick Reference](#-api-quick-reference)
+- [Curated Symbol Groups](#-curated-symbol-groups)
+- [Installation](#-installation)
+- [Documentation](#-documentation)
+- [Platform Support](#-platform-support)
+- [Modular Ecosystem](#-modular-ecosystem)
+- [License](#-license)
+
 ---
 
 ```java
@@ -40,23 +57,6 @@ public class Demo {
     }
 }
 ```
-
----
-
-## Table of Contents
-
-- [Mission](#-mission)
-- [Key Features](#-key-features)
-- [Performance](#-performance)
-- [API Quick Reference](#-api-quick-reference)
-- [Curated Symbol Groups](#-curated-symbol-groups)
-- [Installation](#-installation)
-- [Documentation](#-documentation)
-- [Platform Support](#-platform-support)
-- [Modular Ecosystem](#-modular-ecosystem)
-- [License](#-license)
-
----
 
 ## 🎯 Mission
 
