@@ -6,6 +6,8 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
 [![JitPack](https://img.shields.io/badge/JitPack-ready-green.svg)](https://jitpack.io/#andrestubbe)
 
+---
+
 **⚡ A zero-dependency, zero-allocation UTF-8 Unicode East Asian Width (EAW) and Emoji width engine for Java, designed to
 guarantee pixel-perfect terminal grids and graphical text layout rendering.**
 
@@ -16,10 +18,9 @@ column-width occupied by standard CJK characters and complex double-width Emojis
 By calculating width procedurally without allocating objects, FastEmojis is 100% garbage-collection-free and suited for
 120–240 FPS real-time rendering pipelines.
 
+---
+
 ![FastEmojis Showcase](docs/screenshot_diverse.png)
-
-
-
 
 ---
 
