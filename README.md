@@ -1,4 +1,4 @@
-﻿# FastEmojis v0.1.0 [ALPHA] — High-Performance Unicode & Emoji Width Engine for Java
+# FastEmojis v0.1.0 [ALPHA] — High-Performance Unicode & Emoji Width Engine for Java
 
 [![Status](https://img.shields.io/badge/status-v0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastEmojis/releases/tag/v0.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -20,7 +20,8 @@ By calculating width procedurally without allocating objects, FastEmojis is 100%
 
 ---
 
-![FastEmojis Showcase](docs/screenshot.jpg)
+[![FastEmojis Showcase](docs/screenshot.jpg)](https://www.youtube.com/watch?v=hUM_9KBepzA)
+
 
 ---
 
@@ -59,16 +60,15 @@ public class Demo {
 }
 ```
 
-## 🎯 Mission
+## Why FastEmojis?
 
-The mission is to guarantee absolute visual consistency and layouts across all Java graphical pipelines, full-screen
-TUIs, and console text utilities. FastEmojis provides the zero-overhead Unicode backbone for text measurement, enabling
-seamless emoji support in `FastTerminal`, pixel-perfect text wraps in `FastGraphics`, and custom text area formatting in
-Swing and native UI systems.
+Terminal emulators, TUIs, and text controls fundamentally rely on a strict monospace grid. However, modern text contains complex, multi-column Emojis and wide CJK characters that completely break standard `String.length()` logic. If an Emoji takes up 2 visual columns but Java calculates it as 1 (or 2 surrogate chars as 1 column), the entire row alignment collapses, leaving broken layouts and visual artifacts.
+
+**FastEmojis solves this specific problem.** It provides the zero-overhead Unicode backbone for accurate visual text measurement, guaranteeing pixel-perfect grid alignments across all Java graphical pipelines. It enables seamless emoji support in `FastTerminal`, perfect text wraps in `FastGraphics`, and custom text formatting in native UI systems—all without ever allocating a single byte on the heap.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 * **🚫 Zero Dependencies** — Clean, lightweight, 100% pure Java library.
 * **⚡ Zero Memory Allocation** — Functions procedurally with zero-heap footprint for maximum Blitting performance.
