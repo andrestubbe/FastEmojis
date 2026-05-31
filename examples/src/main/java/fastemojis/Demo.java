@@ -3,6 +3,7 @@ package fastemojis;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import fastterminal.FastTerminal;
 
 public class Demo {
@@ -77,13 +78,26 @@ public class Demo {
     }
     
     private static void runEmojiWallDemo() {
-        // Pre-compute all emojis into a chain
+        // Pre-compute core emojis into a massive chain.
+        // We use extremely strictly curated blocks of pure graphical emojis 
+        // (Faces, Animals, Food) that are guaranteed to be rendered as 
+        // 2 columns wide by the Windows Terminal Font Engine.
         List<String> emojiChain = new ArrayList<>();
-        int startCp = 0x1F300; 
-        int endCp = 0x1FAFF; 
-        for (int cp = startCp; cp <= endCp; cp++) {
-            if (FastEmojis.getWidth(cp) > 0) {
-                emojiChain.add(new String(Character.toChars(cp)));
+        int[][] blocks = {
+            {0x1F600, 0x1F637}, // Classic round faces
+            {0x1F641, 0x1F644}, // Slight frown, smile, upside-down, rolling eyes
+            {0x1F910, 0x1F917}, // Zipper mouth, Nerd, Thinking, Hugging
+            {0x1F920, 0x1F925}, // Cowboy, Clown, ROFL, Drooling, Lying
+            {0x1F927, 0x1F92F}, // Sneezing to Exploding head (SKIPS 1F926 Facepalm!)
+            {0x1F970, 0x1F976}, // Hearts, Yawning to Cold face (SKIPS 1F977 Ninja!)
+            {0x1F978, 0x1F97A}  // Disguised face, Pleading
+        };
+        
+        for (int[] block : blocks) {
+            for (int cp = block[0]; cp <= block[1]; cp++) {
+                if (FastEmojis.getWidth(cp) == 2) { 
+                    emojiChain.add(new String(Character.toChars(cp)));
+                }
             }
         }
         
@@ -105,44 +119,64 @@ public class Demo {
         inputThread.start();
         
         int[] currentSize = new int[]{-1, -1};
+        Random random = new Random();
         
         // Render loop
         while (true) {
             int[] size = FastTerminal.getWindowSize(120, 30);
-            if (size[0] != currentSize[0] || size[1] != currentSize[1]) {
+            boolean resized = (size[0] != currentSize[0] || size[1] != currentSize[1]);
+            
+            if (resized) {
                 currentSize = size;
-                repaint(currentSize[0], currentSize[1], emojiChain);
+                // Full repaint of the audience on resize
+                repaintAudience(currentSize[0], currentSize[1], emojiChain, random);
+            } else {
+                // Just twinkle a few random faces in the audience
+                // 10 faces change state every 50ms
+                twinkleAudience(currentSize[0], currentSize[1], emojiChain, random, 10);
             }
+            
             try {
-                Thread.sleep(50); // Poll for resize
+                Thread.sleep(50); // 20 FPS Update rate
             } catch (InterruptedException e) {}
         }
     }
     
-    private static void repaint(int cols, int rows, List<String> chain) {
+    private static void repaintAudience(int cols, int rows, List<String> palette, Random random) {
         StringBuilder frame = new StringBuilder();
         frame.append("\033[H"); // Cursor to 1,1
         
-        int idx = 0;
+        int emojisPerRow = cols / 2;
+        
         for (int row = 1; row <= rows; row++) {
             frame.append("\033[").append(row).append(";1H");
             
-            int currentLineCols = 0;
-            while (currentLineCols < cols) {
-                String emoji = chain.get(idx % chain.size());
-                // Most emojis from this block are width 2, but we check to be safe
-                int width = getVisualWidth(emoji);
-                
-                if (currentLineCols + width <= cols) {
-                    frame.append(emoji);
-                    currentLineCols += width;
-                    idx++;
-                } else if (currentLineCols + 1 == cols) {
-                    // Fill 1-width gap with a solid block instead of a black space
-                    frame.append(FastEmojis.BLOCK_FULL);
-                    currentLineCols++;
-                }
+            // Da wir jetzt eine reine Liste aus verifizierten 2-Spalten-Emojis haben,
+            // können wir die exakte Anzahl mathematisch perfekt berechnen!
+            // Das behebt den Bug des Windows-Terminals am rechten Rand komplett,
+            // da wir nicht mehr versehentlich "überschreiben".
+            for (int i = 0; i < emojisPerRow; i++) {
+                String emoji = palette.get(random.nextInt(palette.size()));
+                frame.append(emoji);
             }
+        }
+        System.out.print(frame.toString());
+    }
+    
+    private static void twinkleAudience(int cols, int rows, List<String> palette, Random random, int count) {
+        StringBuilder frame = new StringBuilder();
+        int maxCellX = cols / 2;
+        if (maxCellX <= 0 || rows <= 0) return;
+        
+        for (int i = 0; i < count; i++) {
+            int cellX = random.nextInt(maxCellX);
+            int row = random.nextInt(rows) + 1; // 1-indexed row
+            int col = cellX * 2 + 1;            // 1-indexed column, step by 2
+            
+            String emoji = palette.get(random.nextInt(palette.size()));
+            
+            frame.append("\033[").append(row).append(";").append(col).append("H");
+            frame.append(emoji);
         }
         System.out.print(frame.toString());
     }

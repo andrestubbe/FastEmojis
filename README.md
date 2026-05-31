@@ -20,7 +20,7 @@ By calculating width procedurally without allocating objects, FastEmojis is 100%
 
 ---
 
-![FastEmojis Showcase](docs/screenshot_diverse.png)
+![FastEmojis Showcase](docs/screenshot.jpg)
 
 ---
 
@@ -166,7 +166,6 @@ Download the pre-compiled JAR directly to add to your project's classpath:
 
 ## Documentation
 
-* **[COMPILE.md](docs/COMPILE.md)**: Full compilation guide .
 * **[REFERENCE.md](docs/REFERENCE.md)**: Full API descriptions, border configurations, and codepoint index.
 * **[PHILOSOPHIE.md](docs/PHILOSOPHIE.md)**: The engineering rationale for zero-allocation performance.
 * **[ROADMAP.md](docs/ROADMAP.md)**: Future milestones and planned features.
