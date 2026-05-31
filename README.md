@@ -64,7 +64,7 @@ public class Demo {
 
 Terminal emulators, TUIs, and text controls fundamentally rely on a strict monospace grid. However, modern text contains complex, multi-column Emojis and wide CJK characters that completely break standard `String.length()` logic. If an Emoji takes up 2 visual columns but Java calculates it as 1 (or 2 surrogate chars as 1 column), the entire row alignment collapses, leaving broken layouts and visual artifacts.
 
-**FastEmojis solves this specific problem.** It provides the zero-overhead Unicode backbone for accurate visual text measurement, guaranteeing pixel-perfect grid alignments across all Java graphical pipelines. It enables seamless emoji support in `FastTerminal`, perfect text wraps in `FastGraphics`, and custom text formatting in native UI systems—all without ever allocating a single byte on the heap.
+**FastEmojis solves this specific problem.** It provides the zero-overhead Unicode backbone for accurate visual text measurement, guaranteeing pixel-perfect grid alignments across all Java graphical pipelines. It enables seamless emoji support in [FastTerminal](https://github.com/andrestubbe/FastTerminal), perfect text wraps in `FastGraphics`, and custom text formatting in native UI systems—all without ever allocating a single byte on the heap.
 
 ---
 
@@ -190,6 +190,7 @@ MIT License — See [LICENSE](LICENSE) file for details.
 
 ## Related Projects
 
+- [FastTerminal](https://github.com/andrestubbe/FastTerminal) - High-performance Windows Console & ANSI escape engine
 - [FastFileIndex](https://github.com/andrestubbe/FastFileIndex) - Binary file indexing with mmap support
 - [FastFileSearch](https://github.com/andrestubbe/FastFileSearch) - Prefix Trie, N-Gram index, and Ranking engine
 - [FastFileWatch](https://github.com/andrestubbe/FastFileWatch) - USN Journal-based live file monitoring
