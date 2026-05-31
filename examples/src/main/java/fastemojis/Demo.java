@@ -77,66 +77,74 @@ public class Demo {
     }
     
     private static void runEmojiWallDemo() {
-        // Enable ANSI processing in Windows Console
+        // Pre-compute all emojis into a chain
+        List<String> emojiChain = new ArrayList<>();
+        int startCp = 0x1F300; 
+        int endCp = 0x1FAFF; 
+        for (int cp = startCp; cp <= endCp; cp++) {
+            if (FastEmojis.getWidth(cp) > 0) {
+                emojiChain.add(new String(Character.toChars(cp)));
+            }
+        }
+        
         FastTerminal.setAnsiRawMode(true);
+        // Alt buffer, hide cursor, disable auto-wrap
+        System.out.print("\033[?1049h\033[?25l\033[?7l");
         
-        // Enter Alternate Screen Buffer (no scrollback), hide cursor, move to top-left
-        System.out.print("\033[?1049h\033[?25l\033[H");
+        // Listen for exit in background
+        Thread inputThread = new Thread(() -> {
+            try {
+                System.in.read();
+                // Restore terminal
+                System.out.print("\033[?1049l\033[?25h\033[?7h");
+                FastTerminal.setAnsiRawMode(false);
+                System.exit(0);
+            } catch (Exception e) {}
+        });
+        inputThread.setDaemon(true);
+        inputThread.start();
         
-        int[] size = FastTerminal.getWindowSize(120, 30);
-        int targetColumns = size[0];
-        int targetLines = size[1];
+        int[] currentSize = new int[]{-1, -1};
         
-        int currentCodepoint = 0x1F300; 
-        int endCodepoint = 0x1FAFF; 
+        // Render loop
+        while (true) {
+            int[] size = FastTerminal.getWindowSize(120, 30);
+            if (size[0] != currentSize[0] || size[1] != currentSize[1]) {
+                currentSize = size;
+                repaint(currentSize[0], currentSize[1], emojiChain);
+            }
+            try {
+                Thread.sleep(50); // Poll for resize
+            } catch (InterruptedException e) {}
+        }
+    }
+    
+    private static void repaint(int cols, int rows, List<String> chain) {
+        StringBuilder frame = new StringBuilder();
+        frame.append("\033[H"); // Cursor to 1,1
         
-        for (int row = 1; row <= targetLines; row++) {
-            // Move cursor to start of current row
-            System.out.print("\033[" + row + ";1H");
+        int idx = 0;
+        for (int row = 1; row <= rows; row++) {
+            frame.append("\033[").append(row).append(";1H");
             
             int currentLineCols = 0;
-            StringBuilder line = new StringBuilder();
-            
-            while (currentLineCols < targetColumns) {
-                int width = 0;
-                while (width == 0) {
-                    width = FastEmojis.getWidth(currentCodepoint);
-                    if (width == 0) {
-                        currentCodepoint++;
-                        if (currentCodepoint > endCodepoint) currentCodepoint = 0x1F300;
-                    }
-                }
+            while (currentLineCols < cols) {
+                String emoji = chain.get(idx % chain.size());
+                // Most emojis from this block are width 2, but we check to be safe
+                int width = getVisualWidth(emoji);
                 
-                if (currentLineCols + width <= targetColumns) {
-                    line.append(Character.toChars(currentCodepoint));
+                if (currentLineCols + width <= cols) {
+                    frame.append(emoji);
                     currentLineCols += width;
-                    
-                    currentCodepoint++;
-                    if (currentCodepoint > endCodepoint) currentCodepoint = 0x1F300;
-                } else if (currentLineCols + 1 == targetColumns) {
-                    line.append(" ");
+                    idx++;
+                } else if (currentLineCols + 1 == cols) {
+                    // Fill 1-width gap with a solid block instead of a black space
+                    frame.append(FastEmojis.BLOCK_FULL);
                     currentLineCols++;
                 }
             }
-            // Avoid printing the very last character of the bottom-right corner 
-            // if auto-wrap is on, to prevent the alternate buffer from scrolling!
-            if (row == targetLines) {
-                // If the last character is a 2-width emoji, we already replaced it with a space if it didn't fit.
-                // We just truncate the last character of the string to avoid the wrap trigger.
-                line.setLength(line.length() - 1);
-            }
-            System.out.print(line.toString());
         }
-        
-        // Block indefinitely to keep the canvas open
-        try {
-            System.in.read(); // Wait for user to press Enter instead of thread sleep
-        } catch (Exception e) {
-        }
-        
-        // Restore normal terminal state on exit
-        System.out.print("\033[?1049l\033[?25h");
-        FastTerminal.setAnsiRawMode(false);
+        System.out.print(frame.toString());
     }
     
     // Calculate true visual width using FastEmojis
