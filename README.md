@@ -1,6 +1,6 @@
-# FastEmojis v0.1.0 [ALPHA] — High-Performance Unicode & Emoji Width Engine for Java
+# FastEmojis 0.1.0 [ALPHA] — High-Performance Unicode & Emoji Width Engine for Java
 
-[![Status](https://img.shields.io/badge/status-v0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastEmojis/releases/tag/v0.1.0)
+[![Status](https://img.shields.io/badge/status-0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastEmojis/releases/tag/0.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
@@ -136,7 +136,7 @@ Add the JitPack repository and the dependency inside your `pom.xml`:
 <dependency>
     <groupId>com.github.andrestubbe</groupId>
     <artifactId>FastEmojis</artifactId>
-    <version>v0.1.0</version>
+    <version>0.1.0</version>
 </dependency>
 </dependencies>
 ```
@@ -151,7 +151,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.andrestubbe:FastEmojis:v0.1.0'
+    implementation 'com.github.andrestubbe:FastEmojis:0.1.0'
 }
 ```
 
@@ -159,8 +159,8 @@ dependencies {
 
 Download the pre-compiled JAR directly to add to your project's classpath:
 
-* 📦 [**fastemojis-v0.1.0.jar
-  **](https://github.com/andrestubbe/FastEmojis/releases/download/v0.1.0/fastemojis-0.1.0.jar) (Core Library)
+* 📦 [**fastemojis-0.1.0.jar
+  **](https://github.com/andrestubbe/FastEmojis/releases/download/0.1.0/fastemojis-0.1.0.jar) (Core Library)
 
 ---
 
