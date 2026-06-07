@@ -14,158 +14,186 @@ public class FastEmojis {
     // Emojis & Status Icons (Double-Width, 2 Columns)
     
     // Core Dashboard & Diagnostics
-    public static final String LIGHTNING = "⚡";
-    public static final String TARGET = "🎯";
-    public static final String PALETTE = "🎨";
-    public static final String CHART = "📊";
-    public static final String PLUG = "🔌";
-    public static final String SPARKLES = "✨";
-    public static final String GEAR = "⚙️";
-    public static final String BUG = "🐛";
-    public static final String FIRE = "🔥";
-    public static final String ROCKET = "🚀";
+    public static String LIGHTNING = "⚡";
+    public static String TARGET = "🎯";
+    public static String PALETTE = "🎨";
+    public static String CHART = "📊";
+    public static String PLUG = "🔌";
+    public static String SPARKLES = "✨";
+    public static String GEAR = "⚙️";
+    public static String BUG = "🐛";
+    public static String FIRE = "🔥";
+    public static String ROCKET = "🚀";
 
     // Smileys & Emoticons (Double-Width, 2 Columns)
-    public static final String SMILE = "😊";
-    public static final String SMILEY = "😀";
-    public static final String GRIN = "😁";
-    public static final String WINK = "😉";
-    public static final String COOL = "😎";
-    public static final String LAUGH = "😂";
-    public static final String CELEBRATE = "🥳";
-    public static final String THINKING = "🤔";
-    public static final String SHOCKED = "😱";
-    public static final String SAD = "😢";
-    public static final String CRY = "😭";
-    public static final String ANGRY = "😠";
-    public static final String SWEAT = "😅";
-    public static final String ROBOT = "🤖";
-    public static final String ALIEN = "👽";
-    public static final String GHOST = "👻";
-    public static final String POOP = "💩";
+    public static String SMILE = "😊";
+    public static String SMILEY = "😀";
+    public static String GRIN = "😁";
+    public static String WINK = "😉";
+    public static String COOL = "😎";
+    public static String LAUGH = "😂";
+    public static String CELEBRATE = "🥳";
+    public static String THINKING = "🤔";
+    public static String SHOCKED = "😱";
+    public static String SAD = "😢";
+    public static String CRY = "😭";
+    public static String ANGRY = "😠";
+    public static String SWEAT = "😅";
+    public static String ROBOT = "🤖";
+    public static String ALIEN = "👽";
+    public static String GHOST = "👻";
+    public static String POOP = "💩";
 
     // System Components & Storage
-    public static final String TERMINAL = "💻";
-    public static final String SERVER = "🖥️";
-    public static final String FLOPPY = "💾";
-    public static final String HARD_DISK = "💽";
-    public static final String KEYBOARD = "⌨️";
-    public static final String MOUSE = "🖱️";
-    public static final String PRINTER = "🖨️";
+    public static String TERMINAL = "💻";
+    public static String SERVER = "🖥️";
+    public static String FLOPPY = "💾";
+    public static String HARD_DISK = "💽";
+    public static String KEYBOARD = "⌨️";
+    public static String MOUSE = "🖱️";
+    public static String PRINTER = "🖨️";
 
     // File Management
-    public static final String FOLDER = "📁";
-    public static final String FILE = "📄";
-    public static final String ARCHIVE = "📦";
-    public static final String TRASH = "🗑️";
+    public static String FOLDER = "📁";
+    public static String FILE = "📄";
+    public static String ARCHIVE = "📦";
+    public static String TRASH = "🗑️";
 
     // Security & Access
-    public static final String LOCK = "🔒";
-    public static final String KEY = "🔑";
-    public static final String SHIELD = "🛡️";
+    public static String LOCK = "🔒";
+    public static String KEY = "🔑";
+    public static String SHIELD = "🛡️";
 
     // Feedback, Alerts & Status Circles
-    public static final String SUCCESS_GREEN = "🟢";
-    public static final String ERROR_RED = "🔴";
-    public static final String INFO_BLUE = "🔵";
-    public static final String WARN_YELLOW = "🟡";
-    public static final String OK_HEART = "💚";
-    public static final String CHECK = "✅";
-    public static final String WARN = "⚠️";
-    public static final String CRITICAL = "🚨";
-    public static final String SKULL = "☠️";
+    public static String SUCCESS_GREEN = "🟢";
+    public static String ERROR_RED = "🔴";
+    public static String INFO_BLUE = "🔵";
+    public static String WARN_YELLOW = "🟡";
+    public static String OK_HEART = "💚";
+    public static String CHECK = "✅";
+    public static String WARN = "⚠️";
+    public static String CRITICAL = "🚨";
+    public static String SKULL = "☠️";
 
     // Tools & Engineering
-    public static final String WRENCH = "🔧";
-    public static final String HAMMER = "🔨";
-    public static final String TOOLS = "🛠️";
-    public static final String CONSTRUCT = "🚧";
-    public static final String MEASURING_TAPE = "📏";
+    public static String WRENCH = "🔧";
+    public static String HAMMER = "🔨";
+    public static String TOOLS = "🛠️";
+    public static String CONSTRUCT = "🚧";
+    public static String MEASURING_TAPE = "📏";
 
     // Interaction & Collaboration
-    public static final String SPEECH_BUBBLE = "💬";
-    public static final String ENVELOPE = "✉️";
-    public static final String LINK = "🔗";
-    public static final String GLOBE = "🌐";
-    public static final String WIFI = "📶";
+    public static String SPEECH_BUBBLE = "💬";
+    public static String ENVELOPE = "✉️";
+    public static String LINK = "🔗";
+    public static String GLOBE = "🌐";
+    public static String WIFI = "📶";
 
     // Time & Metrics
-    public static final String ALARM_CLOCK = "⏰";
-    public static final String HOURGLASS = "⌛";
-    public static final String HOURGLASS_FLOW = "⏳";
-    public static final String CALENDAR = "📅";
-    public static final String SEARCH = "🔍";
+    public static String ALARM_CLOCK = "⏰";
+    public static String HOURGLASS = "⌛";
+    public static String HOURGLASS_FLOW = "⏳";
+    public static String CALENDAR = "📅";
+    public static String SEARCH = "🔍";
 
     // Gamification & Rewards
-    public static final String TROPHY = "🏆";
-    public static final String MEDAL = "🏅";
-    public static final String STAR = "⭐";
-    public static final String TADA = "🎉";
-    public static final String HEART = "❤️";
-    public static final String LIGHTBULB = "💡";
+    public static String TROPHY = "🏆";
+    public static String MEDAL = "🏅";
+    public static String STAR = "⭐";
+    public static String TADA = "🎉";
+    public static String HEART = "❤️";
+    public static String LIGHTBULB = "💡";
 
     // Weather & Elements
-    public static final String SUN = "☀️";
-    public static final String CLOUD = "☁️";
-    public static final String RAIN = "🌧️";
-    public static final String SNOW = "❄️";
-    public static final String WIND = "🍃";
-    public static final String TREE = "🌲";
+    public static String SUN = "☀️";
+    public static String CLOUD = "☁️";
+    public static String RAIN = "🌧️";
+    public static String SNOW = "❄️";
+    public static String WIND = "🍃";
+    public static String TREE = "🌲";
 
     // Premium UI Symbols (Single-Width, 1 Column)
-    public static final String INFO = "ℹ";
-    public static final String CROSS = "✘";
-    public static final String CHECKMARK = "✔";
-    public static final String GLYPH_STAR = "✦";
-    public static final String GLYPH_DOT = "•";
-    public static final String GLYPH_RIGHT = "›";
-    public static final String GLYPH_LEFT = "‹";
+    public static String INFO = "ℹ";
+    public static String CROSS = "✘";
+    public static String CHECKMARK = "✔";
+    public static String GLYPH_STAR = "✦";
+    public static String GLYPH_DOT = "•";
+    public static String GLYPH_RIGHT = "›";
+    public static String GLYPH_LEFT = "‹";
 
     // Box Drawing Elements (Single-Width, 1 Column)
-    public static final String BOX_HORIZONTAL = "─";
-    public static final String BOX_VERTICAL = "│";
-    public static final String BOX_TOP_LEFT = "┌";
-    public static final String BOX_TOP_RIGHT = "┐";
-    public static final String BOX_BOTTOM_LEFT = "└";
-    public static final String BOX_BOTTOM_RIGHT = "┘";
+    public static String BOX_HORIZONTAL = "─";
+    public static String BOX_VERTICAL = "│";
+    public static String BOX_TOP_LEFT = "┌";
+    public static String BOX_TOP_RIGHT = "┐";
+    public static String BOX_BOTTOM_LEFT = "└";
+    public static String BOX_BOTTOM_RIGHT = "┘";
     
     // Rounded Corners Box Drawing
-    public static final String BOX_ROUND_TOP_LEFT = "╭";
-    public static final String BOX_ROUND_TOP_RIGHT = "╮";
-    public static final String BOX_ROUND_BOTTOM_LEFT = "╰";
-    public static final String BOX_ROUND_BOTTOM_RIGHT = "╯";
+    public static String BOX_ROUND_TOP_LEFT = "╭";
+    public static String BOX_ROUND_TOP_RIGHT = "╮";
+    public static String BOX_ROUND_BOTTOM_LEFT = "╰";
+    public static String BOX_ROUND_BOTTOM_RIGHT = "╯";
 
     // Double Borders Box Drawing
-    public static final String BOX_DOUBLE_HORIZONTAL = "═";
-    public static final String BOX_DOUBLE_VERTICAL = "║";
-    public static final String BOX_DOUBLE_TOP_LEFT = "╔";
-    public static final String BOX_DOUBLE_TOP_RIGHT = "╗";
-    public static final String BOX_DOUBLE_BOTTOM_LEFT = "╚";
-    public static final String BOX_DOUBLE_BOTTOM_RIGHT = "╝";
+    public static String BOX_DOUBLE_HORIZONTAL = "═";
+    public static String BOX_DOUBLE_VERTICAL = "║";
+    public static String BOX_DOUBLE_TOP_LEFT = "╔";
+    public static String BOX_DOUBLE_TOP_RIGHT = "╗";
+    public static String BOX_DOUBLE_BOTTOM_LEFT = "╚";
+    public static String BOX_DOUBLE_BOTTOM_RIGHT = "╝";
 
     // Block Elements (Single-Width, 1 Column)
-    public static final String BLOCK_FULL = "█";
-    public static final String BLOCK_DARK = "▓";
-    public static final String BLOCK_MEDIUM = "▒";
-    public static final String BLOCK_LIGHT = "░";
+    public static String BLOCK_FULL = "█";
+    public static String BLOCK_DARK = "▓";
+    public static String BLOCK_MEDIUM = "▒";
+    public static String BLOCK_LIGHT = "░";
     
     // Partial vertical blocks
-    public static final String BLOCK_LEFT_7_8 = "▉";
-    public static final String BLOCK_LEFT_3_4 = "▊";
-    public static final String BLOCK_LEFT_5_8 = "▋";
-    public static final String BLOCK_LEFT_1_2 = "▌";
-    public static final String BLOCK_LEFT_3_8 = "▍";
-    public static final String BLOCK_LEFT_1_4 = "▎";
-    public static final String BLOCK_LEFT_1_8 = "▏";
+    public static String BLOCK_LEFT_7_8 = "▉";
+    public static String BLOCK_LEFT_3_4 = "▊";
+    public static String BLOCK_LEFT_5_8 = "▋";
+    public static String BLOCK_LEFT_1_2 = "▌";
+    public static String BLOCK_LEFT_3_8 = "▍";
+    public static String BLOCK_LEFT_1_4 = "▎";
+    public static String BLOCK_LEFT_1_8 = "▏";
 
     // Partial horizontal blocks
-    public static final String BLOCK_BOTTOM_1_8 = " ";
-    public static final String BLOCK_BOTTOM_1_4 = "▂";
-    public static final String BLOCK_BOTTOM_3_8 = "▃";
-    public static final String BLOCK_BOTTOM_1_2 = "▄";
-    public static final String BLOCK_BOTTOM_5_8 = "▅";
-    public static final String BLOCK_BOTTOM_3_4 = "▆";
-    public static final String BLOCK_BOTTOM_7_8 = "▇";
+    public static String BLOCK_BOTTOM_1_8 = " ";
+    public static String BLOCK_BOTTOM_1_4 = "▂";
+    public static String BLOCK_BOTTOM_3_8 = "▃";
+    public static String BLOCK_BOTTOM_1_2 = "▄";
+    public static String BLOCK_BOTTOM_5_8 = "▅";
+    public static String BLOCK_BOTTOM_3_4 = "▆";
+    public static String BLOCK_BOTTOM_7_8 = "▇";
+
+    // ============================================================================
+    // Fallback Mode (For Swing / Minimal Terminal Support)
+    // ============================================================================
+
+    public static void enableFallbackMode() {
+        // Double-width icons replaced with [X]
+        FLOPPY = "[S]";
+        HARD_DISK = "[D]";
+        FOLDER = "[O]";
+        FILE = "[N]";
+        ARCHIVE = "[L]";
+        PALETTE = "[C]";
+        KEYBOARD = "[K]";
+        TARGET = "(@)";
+        CHECK = "[+]";
+        TRASH = "[-]";
+        SEARCH = "(?)";
+        TOOLS = "[T]";
+        
+        // Single width symbols
+        CHECKMARK = "v";
+        CROSS = "x";
+        GLYPH_RIGHT = ">";
+        GLYPH_LEFT = "<";
+        GLYPH_STAR = "*";
+        GLYPH_DOT = ".";
+    }
 
     // ============================================================================
     // Comprehensive Unicode East Asian Width (EAW) and Emoji Width Calculation
