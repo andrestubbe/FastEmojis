@@ -1,4 +1,4 @@
-# FastEmojis 0.1.0 [ALPHA-2026-06] — High-Performance Unicode & Emoji Width Engine for Java
+# FastEmojis 0.1.0 [ALPHA-2026-05-18] — High-Performance Unicode & Emoji Width Engine for Java
 
 [![Status](https://img.shields.io/badge/status-0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastEmojis/releases/tag/0.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
