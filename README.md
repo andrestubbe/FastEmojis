@@ -71,6 +71,13 @@ Terminal emulators, TUIs, and text controls fundamentally rely on a strict monos
 - **Strict Unicode Standard**: Full support for East Asian Width (EAW) rules (Wide, Fullwidth, Halfwidth, and Zero-width modifiers).
 - **Sub-Nanosecond Speed**: Procedural range testing executes orders of magnitude faster than regex or map lookups.
 
+| Feature | Standard Java (String.length) | Jansi / JLine3 Width | FastEmojis |
+|:---|:---|:---|:---|
+| **Width Model** | UTF-16 code units (No EAW awareness)| Table-lookup / basic ranges | **Full Unicode EAW + Emoji rules** |
+| **Execution Latency** | Fast (but visually incorrect) | ~10-50 ns (array/map lookups) | **Sub-nanosecond procedural range tests** |
+| **Memory Allocation** | Zero (incorrect result) | Occasional wrapper objects | **100% Zero-GC primitive math** |
+| **Grid Alignment Guard**| Broken (1-col emoji drift) | Partial East Asian support | **Pixel-perfect monospace grid guarantee** |
+
 ---
 
 ## Key Features
